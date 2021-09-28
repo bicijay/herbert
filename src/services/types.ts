@@ -1,22 +1,20 @@
-export type Language = {
-    id: string,
-    label: string,
-    name: string
-}
-
-export type PhraseTranslation = {
-    languageId: string,
-    value: string,
-}
+export type Translation = {
+    slug: string,
+    originalLangSlug: string,
+    phrases: Phrase[],
+};
 
 export type Phrase = {
-    id: string,
     key: string,
     translations: PhraseTranslation[]
-}
+};
 
-export type Translation = {
-    id: string,
-    originalLanguageId: string,
-    phrases: Phrase[]
-}
+export type PhraseTranslation = {
+    langSlug: string,
+    value: string,
+};
+
+export type Language = {
+    slug: string,
+    name: string,
+};
